@@ -1,0 +1,31 @@
+﻿@model TP1.Models.CustomerMovie
+
+@{
+    ViewData["Title"] = "MCustomer";
+}
+
+<h1>MCustomer</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Customers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model.movie.Name
+            </td>
+            <td>
+                <ul>
+                    @foreach (var customer in Model.customerList)
+                    {
+                        <li>@customer.Name</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
